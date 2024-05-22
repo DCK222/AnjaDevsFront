@@ -1,0 +1,40 @@
+#tarjeta{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 300px;
+    height: 280px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 5px;
+    border: 1px solid rgb(46, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+}
+#contenedortitulo{
+    width:90%;
+    height:10% ;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contenedortexto{
+    width:90%;
+    height:70% ;
+    
+}
+#botontienda2 {
+ 
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(26, 26, 26);
+    width: 120px;
+    height: 30px;
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5);
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 3%;
+    
+}

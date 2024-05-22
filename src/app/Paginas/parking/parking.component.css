@@ -1,0 +1,120 @@
+#parkingba{
+    width: 100%;
+  height: 120vh;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+gap: 5%;
+}
+#contegris{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    height: 90%;
+    background-color: #F2F2F2;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+#contereserva{
+    width: 70%;
+    height: 50vh;
+    display: flex;
+    
+    flex-direction: row;
+    gap: 4%;
+}
+#contecolor{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#isleta{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F2F2F2 ;
+    height: 90%;
+    width: 30%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#inpuupar{
+    background-color: #F2F2F2;
+    height: 90%;
+    width: 66%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5%;
+}
+#Circuver{
+    width: 3vh;
+    height: 3vh;
+    background-color: #20CE3C;
+    border-radius: 50%;
+}
+#Circuroj{
+    width: 3vh;
+    height: 3vh;
+    background-color: #CE2020;
+    border-radius: 50%;
+}
+.conteiss{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+#inpp{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+input{
+    border-radius: 7px;
+    border: 1px solid grey;
+    height: 20px;
+    width: 190px;
+    background-color: #cdcdcd2f;
+}
+#inppdos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+#mainin{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#prueba{
+    background-color: #F2F2F2;
+    height: 90%;
+    width: 66%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+}
+#botonreserva{
+    background-color: #2562FF;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 0;
+    height: 30px;
+    width: 130px;
+}

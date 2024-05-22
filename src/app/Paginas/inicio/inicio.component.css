@@ -1,0 +1,70 @@
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    overflow-y: hidden !important; 
+    
+}
+#bannerinicio{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    height: 63vh;
+    background-color: #D9D9D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#contenedorCirculos{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 7%;
+}
+.circulos{
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 110px;
+    border-radius: 50%;
+    height: 110px;
+    display: flex;
+    
+}
+#circucolor1 {
+    background-color: #238BEB;
+    border: 0 solid #238BEB; 
+   
+}
+
+
+#circucolor2{
+    background-color: #FF9D43;
+}
+#circucolor3{
+    background-color: #FF6262;
+}
+.contecirr{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+@keyframes cambioColorFondo {
+    from {
+        background-color: #238BEB; /* Color inicial */
+        border: 0 solid #238BEB;
+    }
+    to {
+        background-color: #ffffff; /* Color final */
+        border: 2px solid #238BEB;
+    }
+}
