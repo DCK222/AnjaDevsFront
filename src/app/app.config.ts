@@ -10,7 +10,7 @@ export function tokenGetter() {
   return sessionStorage.getItem(entorno.TOKEN_NAME);
 }
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes),importProvidersFrom(
+  providers: [provideRouter(routes),provideHttpClient(),importProvidersFrom(
     JwtModule.forRoot({
         config: {
             tokenGetter: tokenGetter,

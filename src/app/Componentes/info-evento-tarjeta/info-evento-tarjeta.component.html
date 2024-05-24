@@ -1,0 +1,23 @@
+<div class="modal-backdrop" (click)="close()"></div>
+<div class="modal">
+  <h2>Detalles del Evento</h2>
+  <form id="formulariocss" (ngSubmit)="save()">
+    <div>
+      <label for="eventName">Nombre del Evento:</label>
+      <input id="eventName" [(ngModel)]="event.name" name="eventName" required />
+    </div>
+    <div>
+      <label for="eventQuantity">Cantidad del Evento:</label>
+      <input id="eventQuantity" [(ngModel)]="event.quantity" name="eventQuantity" type="number" required />
+    </div>
+    <div>
+      <label for="eventPlanta">Planta:</label>
+      <input id="eventPlanta" [(ngModel)]="event.planta" name="eventPlanta" readonly />
+    </div>
+    <div>
+      <label for="eventZone">Zona:</label>
+      <input id="eventZone" [(ngModel)]="event.zone" name="eventZone" readonly />
+    </div>
+    <button type="submit">Guardar</button>
+  </form>
+</div>

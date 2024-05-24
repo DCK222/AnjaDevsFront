@@ -1,18 +1,39 @@
 <app-header></app-header>
-<body>
-   
-    <div id="contenedormainplanos">
-        <div id="contenedorselect">
-            <select id="selectestilos" name="select">
-                <option value="value1" selected>Planta 1</option>
-                <option value="value2" >Planta 2</option>
-                <option value="value3">Planta 3</option>
-              </select>
-        </div>
-        <div id="contenedorPlanos">
-            <p>Planos</p>
-        </div>
-
+<div id="contenedormainplanos">
+    <div id="contenedorselect">
+        <select id="selectestilos" name="select" [(ngModel)]="selectedPlanta" (change)="onPlantaChange()">
+            <option value="planta1">Planta 1</option>
+            <option value="planta2">Planta 2</option>
+            <option value="planta3">Planta 3</option>
+        </select>
+        <p>Planos de {{ selectedPlanta }}</p>
     </div>
+    <div id="contenedorPlanos">
+        <div id="plano" 
+             (mousedown)="startSelection($event)" 
+             (mousemove)="resizeSelection($event)" 
+             (mouseup)="endSelection($event)" 
+             [ngStyle]="{'background-image': 'url(' + plantaUrl + ')'}">
+
+             @for (zone of zones; track $index) {
+                <div class="selected-zone" [ngStyle]="getZoneStyle(zone)"></div>
+             }
+
+             @if (isSelecting && enableSelection) {
+                <div class="selected-zone" [ngStyle]="getSelectionStyle()"> </div>
+             }
+        
+          
+            
+        </div>
+    </div>
+    <button (click)="startZoneSelection()">Seleccionar zona</button>
+        @if (isModalOpen) {
+            <app-info-evento-tarjeta [event]="currentEvent" (closeModal)="closeModal()" (saveEvent)="saveEvent($event)"></app-info-evento-tarjeta>
+
+        }
+
     
-</body>
+</div>
+
+

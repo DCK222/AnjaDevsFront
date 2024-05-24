@@ -33,3 +33,24 @@ justify-content: center;
     border-radius: 5px;
     background-color: #f2f2f2b8;
 }
+.selected-zone {
+    position: absolute;
+    border: 2px solid red; /* Asegúrate de que el color sea visible sobre el fondo */
+    pointer-events: none; /* Evitar que el div interfiera con los eventos de mouse */
+}
+#plano{
+    
+   
+    background-color: #dddddd80;
+    border-radius: 5px;
+
+    position: relative;
+    /* Asegúrate de definir un tamaño o que tenga contenido suficiente para seleccionar */
+    width: 100%;  /* Ejemplo: ajustar al tamaño deseado o al contenido */
+    height: 100%; /* Ajusta según el contenido o necesidad */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#plano.selecting-mode { /* Cuando esté activo el modo de selección */
+    cursor: crosshair; /* Cambia el cursor a cruz para mejorar la precisión */
+}

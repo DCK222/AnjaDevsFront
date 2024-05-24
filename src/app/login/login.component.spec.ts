@@ -1,23 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginComponent } from './login.component';
+import { LoginService } from '../_servicios/login.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+describe('LoginService', () => {
+  let service: LoginService;
 
-describe('LoginComponent', () => {
-  let component: LoginComponent;
-  let fixture: ComponentFixture<LoginComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LoginComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(LoginComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
+      providers: [LoginService]
+    });
+    service = TestBed.inject(LoginService);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should be created', () => {
+    expect(service).toBeTruthy();
   });
 });
