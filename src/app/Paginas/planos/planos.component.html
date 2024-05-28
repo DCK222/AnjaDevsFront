@@ -2,13 +2,14 @@
 <div id="contenedormainplanos">
     <div id="contenedorselect">
         <select id="selectestilos" name="select" [(ngModel)]="selectedPlanta" (change)="onPlantaChange()">
-            <option value="planta1">Planta 1</option>
-            <option value="planta2">Planta 2</option>
-            <option value="planta3">Planta 3</option>
+            <option value="planta1">Planta Baja</option>
+            <option value="planta2">Planta 1</option>
+            <option value="planta3">Planta 2</option>
         </select>
         <p>Planos de {{ selectedPlanta }}</p>
     </div>
     <div id="contenedorPlanos">
+        <img [src]="plantaUrl" id="imagen" alt="Plano de la planta seleccionada">
         <div id="plano" 
              (mousedown)="startSelection($event)" 
              (mousemove)="resizeSelection($event)" 
@@ -23,6 +24,7 @@
                 <div class="selected-zone" [ngStyle]="getSelectionStyle()"> </div>
              }
         
+             
           
             
         </div>

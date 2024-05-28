@@ -10,18 +10,19 @@ height: 100vh;
     justify-content: center;
     flex-direction: column;
     margin-top: 30px;
-    gap: 2%;
+    gap: 1%;
 
 }
 #contenedorselect{
     width: 80%;
     height: 5vh;
+    margin-bottom: 40px;
     
 }
 #contenedorPlanos{
 background-color: #F2F2F2;
-width: 80%;
-height: 80vh;
+width: 60%;
+height:70vh;
 border-radius: 5px;
 display: flex;
 align-items: center;
@@ -35,22 +36,37 @@ justify-content: center;
 }
 .selected-zone {
     position: absolute;
-    border: 2px solid red; /* Asegúrate de que el color sea visible sobre el fondo */
-    pointer-events: none; /* Evitar que el div interfiera con los eventos de mouse */
+    border: 2px solid red; 
+    pointer-events: none; 
 }
 #plano{
     
    
-    background-color: #dddddd80;
+    background-color: #dddddd27;
     border-radius: 5px;
 
     position: relative;
-    /* Asegúrate de definir un tamaño o que tenga contenido suficiente para seleccionar */
-    width: 100%;  /* Ejemplo: ajustar al tamaño deseado o al contenido */
-    height: 100%; /* Ajusta según el contenido o necesidad */
+    
+    
     background-repeat: no-repeat;
     background-size: cover;
+    width: 100%; 
+    height: 100%; 
+    background-size: cover; 
+    background-position: center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    
 }
-#plano.selecting-mode { /* Cuando esté activo el modo de selección */
-    cursor: crosshair; /* Cambia el cursor a cruz para mejorar la precisión */
+#plano.selecting-mode { 
+    cursor: crosshair; 
 }
+#imagen{
+  
+        position: absolute;
+        z-index: 0; 
+        width: 700px;
+ 
+}
+

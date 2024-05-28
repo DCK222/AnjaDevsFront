@@ -1,0 +1,15 @@
+<div class="parking-map">
+    <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="675pt" height="368pt" viewBox="0 0 675 368"
+      preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0,368) scale(0.1,-0.1)"
+      fill="#000000" stroke="none">
+        <!-- Asume que estos son algunos de los paths del SVG -->
+        <path *ngFor="let space of spaces" [attr.id]="'space' + space.id"
+          [attr.fill]="space.reserved ? 'red' : 'green'" 
+          (click)="toggleReservation(space.id - 1)"
+          d="M...Z"/>
+        <!-- Asegúrate de incluir el path real de cada plaza aquí -->
+      </g>
+    </svg>
+  </div>

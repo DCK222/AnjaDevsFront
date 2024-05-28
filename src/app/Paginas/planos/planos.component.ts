@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { HeaderComponent } from "../../Componentes/header/header.component";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,11 @@ import { InfoEventoTarjetaComponent } from "../../Componentes/info-evento-tarjet
     styleUrl: './planos.component.css',
     imports: [HeaderComponent, FormsModule, CommonModule, InfoEventoTarjetaComponent]
 })
-export class PlanosComponent {
+export class PlanosComponent implements OnInit {
+    ngOnInit(): void {
+      this.plantaUrl = `./assets/img/${this.selectedPlanta}.jpg`;
+      this.isSelecting = false;
+    }
     selectedPlanta: string = 'planta1';
     plantaUrl: string = '';
     isSelecting: boolean = false;
@@ -23,8 +27,9 @@ export class PlanosComponent {
     currentEvent: any = {};
   
     onPlantaChange(): void {
-      this.plantaUrl = `/assets/${this.selectedPlanta}.jpg`;
+      this.plantaUrl = `./assets/img/${this.selectedPlanta}.jpg`;
       this.isSelecting = false;
+
     }
   
     startZoneSelection(): void {
@@ -107,4 +112,6 @@ export class PlanosComponent {
       console.log('Evento guardado:', event);
       // Aquí puedes agregar la lógica para guardar el evento en tu backend o en un servicio
     }
+
+    
 }
